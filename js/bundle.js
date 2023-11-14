@@ -1,0 +1,2 @@
+!function(){"use strict";const e=document.querySelector(".navigation");document.addEventListener("scroll",(t=>{document.documentElement.scrollTop>64?e.classList.add("scrolled"):e.classList.remove("scrolled")}))}();
+//# sourceMappingURL=bundle.js.map
