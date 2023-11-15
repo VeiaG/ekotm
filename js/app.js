@@ -1,22 +1,51 @@
 import '../index.scss';
 const nav = document.querySelector(".navigation");
-const s1 = document.querySelector(".product");
-const s2 = document.querySelector(".buy");
-console.log(s1);
+const sections = document.querySelectorAll("section");
 document.addEventListener("scroll",(e)=>{
     const scrollY = document.documentElement.scrollTop;
-    if(scrollY>64){
+    let backgroundColor;
+
+    if (scrollY > 64) {
         nav.classList.add("scrolled");
-        if(scrollY+80>s1.offsetTop){
-            if(scrollY+80>s2.offsetTop){
-                nav.style="background:var(--primary)";
-                return
+
+        sections.forEach((section) => {
+            if (scrollY + 80 > section.offsetTop) {
+                backgroundColor = section.getAttribute("data-background");
             }
-            nav.style="background:var(--accent)";
+        });
+    } else {
+        nav.classList.remove("scrolled");
+    }
+    nav.style.background = backgroundColor || "";
+});
+
+const curSlide = document.querySelector(".slider__image");
+const slides = document.querySelectorAll(".slider__select-image");
+let currentSlide = 0;
+
+function updateSelected(){
+    const src = slides[currentSlide].src;
+    curSlide.src = src;
+    slides.forEach((slide,i)=>{
+        if(i===currentSlide){
+            slide.classList.add("selected");
             return
         }
-        nav.style="";
-        return;
-    }
-    nav.classList.remove("scrolled");
+        slide.classList.remove("selected");
+    })
+}
+updateSelected();
+const nextTimer = ()=>{
+    const length = slides.length;
+    currentSlide = (currentSlide+1)%length;
+    updateSelected();
+}
+const timeout = setInterval(nextTimer,5000);
+slides.forEach((slide,i)=>{
+    slide.addEventListener("click",(e)=>{
+        currentSlide = i;
+        clearTimeout(timeout);
+        updateSelected();
+    });
 });
+
