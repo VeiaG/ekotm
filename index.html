@@ -5,64 +5,71 @@
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <title>ЕКО ТМ</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
   </head>
   <body>
-    <nav id="main" class="navigation">
+    <nav class="navigation">
       <div class="navigation__wrapper">
-        <a href="" class="navigation__logo">EKO TM</a>
+        <a href="#main" class="navigation__logo">EKO TM</a>
         <div class="navigation__links">
-          <a href="">Обладнання</a>
-          <a href="">Контакти</a>
-          <a href="">Про нас</a>
+          <a href="#product">Обладнання</a>
+          <a href="#contacts">Контакти</a>
+          <a href="#about">Про нас</a>
         </div>
       </div>
     </nav>
-    <section data-background="var(--secondary)" class="header">
+    <section data-background="var(--secondary)" class="header" id="main">
       <div class="header__background">
         <div class="header__gradient"></div>
         <div class="header__blur"></div>
-        <video src="./videos/video_main_loop.MP4" loop muted autoplay playsinline></video>
+        <video 
+          src="./videos/video_main_loop.MP4#t=0.1" 
+          poster="./videos/video_main_loop.png"
+          loop muted autoplay playsinline></video>
       </div>
       <div class="header__wrapper">
         <div class="header__text">
-          <h1>Інноваційне обладнання для екологічного пакування</h1>
+          <h1><span id="header__line"></span>Інноваційне обладнання для екологічного пакування</h1>
         </div>
       </div>
     </section>
-    <section data-background="var(--secondary)" class="about">
+    <section data-background="var(--secondary)" class="about" id="about">
       <div class="about__wrapper">
         <div class="about__logo">
-          <h1>
+          <h1 data-animate >
             ЕКО ТМ
           </h1>
-          <h2>
+          <h2 data-animate >
             НОВІ ІДЕЇ ПАКУВАННЯ
           </h2>
         </div>
-        <div class="title__description title__description--big">
+        <div class="title__description title__description--big" data-animate >
           Ласкаво просимо до світу інновацій та відмінностей, де кожен продукт — це частинка нашого професійного підходу та зобов'язання до високої якості. Компанія "ЕКО ТМ" стоїть на передових позиціях у виробництві термопакувального обладнання, пропонуючи найсучасніші рішення для вашого бізнесу.
         </div>
-        <div class="title__header">
+        <div class="title__header" data-animate >
           НАША МІСІЯ
         </div>
         <div class="about__slide">
-          <img src="./images/about1.png" alt="">
+          <img src="./images/about1.png" alt="" data-animate >
           <div class="about__description">
-            <div class="desc-item">
+            <div class="desc-item" data-animate >
               <div class="desc-item__title">
                 <img src="./images/plantsvgrepocom-1.svg" alt="">
                 <h1>Зберігати екологію</h1>
               </div>
               <p>Наші технології та матеріали допомагають зменшувати негативний вплив на довкілля, розвиваючи сталі та екологічно чисті рішення.</p>
             </div>
-            <div class="desc-item">
+            <div class="desc-item" data-animate >
               <div class="desc-item__title">
                 <img src="./images/rockettakeoff-1.svg" alt="">
                 <h1>Забезпечувати Інновації</h1>
               </div>
               <p>Ми постійно вдосконалюємо наше обладнання, вивчаємо нові технології та шукаємо ефективні шляхи поліпшення упаковки вашого продукту.</p>
             </div>
-            <div class="desc-item">
+            <div class="desc-item" data-animate >
               <div class="desc-item__title">
                 <img src="./images/briefcase-1.svg" alt="">
                 <h1>Піднімати Стандарти Якості</h1>
@@ -71,12 +78,12 @@
             </div>
           </div>
         </div>
-        <div class="title__header">
+        <div class="title__header" data-animate >
           НАШІ ПЕРЕВАГИ
         </div>
         <div class="about__slide reverse">
-          <img src="./images/about2.png" alt="">
-          <div class="about__description">
+          <img src="./images/about2.png" alt="" data-animate >
+          <div class="about__description" data-animate >
             <div class="desc-item">
               <div class="desc-item__title">
                 <img src="./images/internetsvgrepocom-1.svg" alt="">
@@ -84,14 +91,14 @@
               </div>
               <p>Ми — українська компанія, пишаємося своєю національною спадщиною та виготовленням продукції в Україні.</p>
             </div>
-            <div class="desc-item">
+            <div class="desc-item" data-animate >
               <div class="desc-item__title">
                 <img src="./images/handshake-1.svg" alt="">
                 <h1>Співпраця та Довіра</h1>
               </div>
               <p>Ми віримо в те, що відкритий діалог та партнерство — це основа успішної співпраці. Ви можете розраховувати на нас як на надійного партнера.</p>
             </div>
-            <div class="desc-item">
+            <div class="desc-item" data-animate >
               <div class="desc-item__title">
                 <img src="./images/plantcloudsvgrepocom-1.svg" alt="">
                 <h1>Спрямованість на Сталість</h1>
@@ -105,122 +112,124 @@
     <section data-background="var(--secondary)" class="video">
       <div class="video__wrapper">
         <div class="title">
-          <div class="title__header">
+          <div class="title__header"  data-animate >
             Обладнання в дії
           </div>
-          <div class="title__description">
+          <div class="title__description"  data-animate >
             Переконайтеся на власні очі, як наше термопакувальне обладнання забезпечить найвищий стандарт упаковки для ваших продуктів. 
           </div>
         </div>
-        <video src="./videos/video_main_loop.MP4" controls="show" playsinline></video>
+        <video  data-animate src="./videos/video_main_loop.MP4" controls="show" playsinline></video>
       </div>
     </section>
     <section data-background="var(--accent)" class="product">
       <div class="product__wrapper">
         <div class="title">
-          <div class="title__header">
+          <div class="title__header"  data-animate >
             Наш термопакувальник
           </div>
-          <div class="title__description">
+          <div class="title__description" data-animate >
             Ефектне, екологічне та просте у використанні обладнання - ось як ми допомагаємо вашим продуктам виділятися.
           </div>
         </div>
         <div class="product-slide" style="background:var(--primary); color:var(--background)" >
-          <video src="./videos/loop (3).mp4" loop muted autoplay playsinline></video>
+          <video src="./videos/loop1.mp4" loop muted autoplay playsinline  data-animate ></video>
           <div class="product-slide__description">
-            <h1>Миттєве Пакування</h1>
-            <p>Наш термопакувальник - це не просто обладнання, це швидкість та легкість у кожному етапі пакування. Віддайте перевагу ефективності та якості</p>
+            <h1 data-animate >Миттєве Пакування</h1>
+            <p data-animate >Наш термопакувальник - це не просто обладнання, це швидкість та легкість у кожному етапі пакування. Віддайте перевагу ефективності та якості</p>
           </div>
         </div>
         <div class="product-slide reverse" style="background:var(--background); color:var(--text)" >
-          <video src="./videos/loop (2).mp4" loop muted autoplay playsinline></video>
+          <video data-animate  src="./videos/loop2.mp4" loop muted autoplay playsinline></video>
           <div class="product-slide__description">
-            <h1>Неперевершений Захист</h1>
-            <p>Для пакування викорстовується двохкомпонентний папір. Целюлоза та тонкий шар плівки , яка при термічному притисканні спаюється, утворюючи перешкоду для розповсюдження запахів, забруднень і навіть рідин при транспортуванні після покупки товару в магазині.</p>
+            <h1 data-animate >Неперевершений Захист</h1>
+            <p data-animate >Для пакування викорстовується двохкомпонентний папір. Целюлоза та тонкий шар плівки , яка при термічному притисканні спаюється, утворюючи перешкоду для розповсюдження запахів, забруднень і навіть рідин при транспортуванні після покупки товару в магазині.</p>
           </div>
         </div>
         <div class="product-slide" style="background:var(--secondary); color:var(--background)" >
-          <video src="./videos/loop (1).mp4" loop muted autoplay playsinline></video>
+          <video data-animate  src="./videos/loop3.mp4" loop muted autoplay playsinline></video>
           <div class="product-slide__description">
-            <h1>Естетика та Якість</h1>
-            <p>Таке пакування не просто захищає продукти - вона створює враження. 
+            <h1 data-animate >Естетика та Якість</h1>
+            <p data-animate >Таке пакування не просто захищає продукти - вона створює враження. 
               Якість пакування відображається на вашому бренді, надаючи покупцям неперевершені естетичні враження та підвищуючи їхню довіру до вашого продукту.</p>
           </div>
         </div>
       </div>
     </section>
-    <section data-background="var(--primary)" class="buy" id="buy">
+    <section data-background="var(--primary)" class="buy" id="product">
       <div class="buy__wrapper">
-        <div class="slider">
+        <div class="slider" >
           <div class="slider__select">
             <img src="./images/1.JPG" class="slider__select-image" alt="">
             <img src="./images/2.JPG" class="slider__select-image" alt="">
             <img src="./images/3.JPG" class="slider__select-image" alt="">
             <img src="./images/4.JPG" class="slider__select-image" alt="">
+            <img src="./images/5.JPG" class="slider__select-image" alt="">
+            <img src="./images/6.JPG" class="slider__select-image" alt="">
           </div>
           <img class="slider__image" src="./images/3.JPG" alt="">
         </div>
         <div class="buy__description">
-          <h1>Термопакувальник</h1>
+          <h1 >Термопакувальник</h1>
           <div class="buy__parameters">
-            <div class="buy__icon">
+            <div class="buy__icon" >
               <img src="./images/boxfill-1.svg" alt="">
               ТП-41470768 АЛЬФА
             </div>
-            <div class="buy__icon">
+            <div class="buy__icon" >
               <img src="./images/arrowsfullscreen-1.svg" alt="">
               400x330x230 мм
               </div>
-            <div class="buy__icon">
-              <img src="./images/lightningchargefill-1.svg" alt="">
+            <div class="buy__icon" >
+              <img src="./images/lightning-charge-fill 1.svg" alt="">
               220В 50Гц 200Вт
             </div>
           </div>
           <div class="buy__price">
-            <h2>Ціна : 1111 грн.*</h2>
-            <p>*ціна вказана з  врахуванням ПДВ</p>
-            <a href="" class="buy__button">Замовити</a>
+            <h2 >Ціна : 1111 грн.*</h2>
+            <p >*ціна вказана з  врахуванням ПДВ</p>
+            <a href="#contacts" class="buy__button">Замовити</a>
           </div>
         </div>
       </div>
     </section>
     <section data-background="var(--secondary)" class="material">
-      <div class="material__image">
+      <div class="material__image" data-animate >
         <img src="./images/material.svg" alt="">
       </div>
       <div class="material__wrapper">
         <div class="title">
-          <div class="title__header">
+          <div class="title__header" data-animate >
             Витратні матеріали
           </div>
-          <div class="title__description">
+          <div class="title__description" data-animate >
             Ідеальна Гармонія Між Міцністю та Екологічністю.
           </div>
         </div>
         <div class="material__text">
-          <span id="text1" class="material__txt">
+          <span id="text1" class="material__txt" data-animate >
             Поліетиленовий наношар
           </span>
-          <span id="text2">
+          <span id="text2" data-animate >
             Целюлоза
           </span>
-          <span id="text3">
+          <span id="text3" data-animate >
             <img src="./images/arrow.svg" alt="">
             10 мікронів
           </span>
         </div>
         <div class="advantages">
-          <div class="advantages__slide">
+          <div data-animate  class="advantages__slide">
             <h1>Екологічність</h1>
             <img src="./images/advantage1.svg" alt="">
             <p>Безпечний для використання та утилізації.</p>
           </div>
-          <div class="advantages__slide">
+          <div data-animate  class="advantages__slide">
             <h1>Міцність</h1>
             <img src="./images/advantage2.svg" alt="">
             <p>Щільне пакування запобігає будь-яким ушкодженням продуктів.</p>
           </div>
-          <div class="advantages__slide">
+          <div data-animate  class="advantages__slide">
             <h1>Якість</h1>
             <img src="./images/advantage3.svg" alt="">
             <p>Якісно запакований товар залишає приємне враження у покупців.</p>
@@ -232,10 +241,10 @@
       <svg class="svg">
         <clipPath id="clip" clipPathUnits="objectBoundingBox"><path d="M0,0.081 C0,0.081,0.161,0.136,0.497,0.036 C0.833,-0.065,1,0.081,1,0.081 V1 H0 V0.081"></path></clipPath>
       </svg>
-      <div class="title__header">
+      <div class="title__header" data-animate >
         Відгуки
       </div>
-      <div class="reviews__slider">
+      <div class="reviews__slider" data-animate >
         <div class="reviews__slide">
           <div class="reviews__header">
             <img src="./images/review (0).png" alt="">
@@ -325,12 +334,12 @@
         </div>
       </div>
     </section>
-    <footer class="footer">
+    <footer class="footer" id="contacts">
       <div class="footer__wrapper">
-        <div class="title__header">
+        <div class="title__header" data-animate >
           Контакти
         </div>
-        <div class="footer__info">
+        <div class="footer__info" data-animate >
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2542.426002463203!2d30.628504599999996!3d50.414534100000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c508ffe9d5f9%3A0x3ead2216a0beac88!2zMUEsINC_0YDQvtGB0L_QtdC60YIg0J_QtdGC0YDQsCDQk9GA0LjQs9C-0YDQtdC90LrQsCwgMdCQLCDQmtC40ZfQsiwgMDIwMDA!5e0!3m2!1suk!2sua!4v1700073345317!5m2!1suk!2sua"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           <div class="footer__text">
             <div class="footer__icon">
@@ -365,6 +374,8 @@
       </div>
       
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="./js/bundle.js"></script>
   </body>
 </html>

@@ -9,7 +9,7 @@ document.addEventListener("scroll",(e)=>{
         nav.classList.add("scrolled");
 
         sections.forEach((section) => {
-            if (scrollY + 80 > section.offsetTop) {
+            if (scrollY + 64 > section.offsetTop) {
                 backgroundColor = section.getAttribute("data-background");
             }
         });
@@ -49,3 +49,36 @@ slides.forEach((slide,i)=>{
     });
 });
 
+
+
+gsap.registerPlugin(ScrollTrigger);
+const elementsToAnimate = document.querySelectorAll('[data-animate]');
+
+
+elementsToAnimate.forEach((element) => {
+    gsap.from(element, {
+      opacity: 0, 
+      y: 20, 
+      scrollTrigger: {
+        trigger: element, 
+        start: "top 90%", 
+        end: "bottom 80%", 
+        once: true, 
+      },
+    });
+  });
+
+gsap.fromTo(
+    "#header__line",
+    { width:"8px"}, 
+    {
+        width:"100%",
+        opacity:0.9,
+        scrollTrigger: {
+        trigger: ".header", 
+        start: "top ", 
+        end: "bottom 75%", 
+        scrub: 1, 
+        },
+    }
+);
