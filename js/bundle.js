@@ -1,2 +1,2 @@
-!function(){"use strict";const e=document.querySelector(".navigation");document.addEventListener("scroll",(t=>{document.documentElement.scrollTop>64?e.classList.add("scrolled"):e.classList.remove("scrolled")}))}();
+!function(){"use strict";const e=document.querySelector(".navigation"),o=document.querySelector(".product"),t=document.querySelector(".buy");console.log(o),document.addEventListener("scroll",(c=>{const r=document.documentElement.scrollTop;if(r>64)return e.classList.add("scrolled"),r+80>o.offsetTop?r+80>t.offsetTop?void(e.style="background:var(--primary)"):void(e.style="background:var(--accent)"):void(e.style="");e.classList.remove("scrolled")}))}();
 //# sourceMappingURL=bundle.js.map

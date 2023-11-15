@@ -42,7 +42,7 @@ div[class*='__wrapper']{
   left:0;
   top:0;
   height:96px;
-  transition: height 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   color:var(--background);
   &.scrolled{
     height:64px;
@@ -251,11 +251,18 @@ div[class*='__wrapper']{
     font-size: 48px;
     font-weight: 700;
     text-align: center;
+    @media(max-width:832px){
+      font-size:32px;
+    }
+
   }
   &__description{
     padding:0 192px;
     &--big{
       padding:0 96px;
+      @media(max-width:832px){
+        padding:0;
+      }
     }
     font-weight: 400;
     font-size:24px;
@@ -289,6 +296,79 @@ div[class*='__wrapper']{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap:32px;
+    gap:96px;
+  }
+}
+.product-slide{
+  display:flex;
+  justify-content: space-between;
+  //align-items: start;
+  
+  @media(max-width:1280px){
+    flex-direction: column;
+    gap:16px;
+    padding:32px;
+  }
+  video{
+    transform:translate(24px, -24px);
+    object-fit: cover;
+    width:40%;
+    aspect-ratio: 1.2;
+    @media(max-width:1280px){
+      width:100%;
+      height: auto;
+      transform: none;
+    }
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+  }
+  &.reverse{
+    flex-direction: row-reverse;
+    @media(max-width:1280px){
+      flex-direction: column;
+    }
+    video{
+      transform:translate(-24px, -24px);
+      @media(max-width:1280px){
+        width:100%;
+        height: auto;
+        transform: none;
+      }
+    }
+  }
+  &__description{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:16px;
+    padding:64px;
+    @media(max-width:832px){
+      padding:0;
+    }
+    h1,p{
+      margin:0;
+    }
+    h1{
+      font-size: 48px;
+      font-weight: 700;
+      @media(max-width:832px){
+        font-size:32px;
+      }
+    }
+    p{
+      font-size: 32px;
+      font-weight: 400;
+    }
+  }
+}
+.buy{
+  background:var(--primary);
+  color:var(--background);
+  height:1200px;
+  &__wrapper{
+    
+    display: flex;
+    justify-content: space-between;
+    gap:64px;
   }
 }
