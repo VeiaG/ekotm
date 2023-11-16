@@ -310,6 +310,7 @@ div[class*='__wrapper']{
     position: relative;
     @media(max-width:832px){
       width:100%;
+      position: relative;
     }
     &.play {
       video{
@@ -338,10 +339,11 @@ div[class*='__wrapper']{
       //filter:drop-shadow(0 0 1.5 var(--text));
       height:64px;
       width:64px;
-      border-radius: 32px;
       z-index:15;
       position: absolute;
-      margin:auto;
+      top:calc(50% - 32px);
+      left:calc(50% - 32px);
+      
     }
   }
 }
