@@ -768,6 +768,7 @@ div[class*='__wrapper']{
   &__text{
     display: flex;
     flex-direction: column;
+    position: relative;
     gap:16px;
     h2{
       font-size: 32px;
@@ -785,6 +786,27 @@ div[class*='__wrapper']{
       @media(max-width:832px){
         font-size:24px;
       }
+    }
+  }
+  &__patent{
+    @media(max-width:832px){
+      position: relative;
+    }
+    position: absolute;
+    right:0;
+    bottom: 0;
+    width:64px;
+    &:hover{
+      img{
+        opacity: 1;
+        scale:1.05;
+      }
+    }
+    img{
+      cursor: pointer;
+      opacity: 0.5;
+      transition: all 0.3s ease-in-out;
+      width:100%;
     }
   }
   &__copyright{
