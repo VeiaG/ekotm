@@ -304,8 +304,45 @@ div[class*='__wrapper']{
     flex-direction: column;
     gap:32px;
   }
-  video{
+  
+  .video-container{
     width:75%;
+    position: relative;
+    @media(max-width:832px){
+      width:100%;
+    }
+    &.play {
+      video{
+        filter:none;
+      }
+      #play-btn{
+        display: none;
+      }
+    }
+    &:hover{
+      video{
+        filter:none;
+      }
+      #play-btn{
+        scale:1.05;
+      }
+    }
+    video{
+      transition:all 0.3s ease-in-out;
+      width:100%;
+      filter:grayscale(75%) brightness(75%); 
+      
+    }
+    #play-btn{
+      transition:all 0.3s ease-in-out;
+      //filter:drop-shadow(0 0 1.5 var(--text));
+      height:64px;
+      width:64px;
+      border-radius: 32px;
+      z-index:15;
+      position: absolute;
+      margin:auto;
+    }
   }
 }
 .product{

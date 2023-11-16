@@ -1,6 +1,6 @@
 import '../index.scss';
 const nav = document.querySelector(".navigation");
-const sections = document.querySelectorAll("section");
+const sections = document.querySelectorAll("[data-background]");
 document.addEventListener("scroll",(e)=>{
     const scrollY = document.documentElement.scrollTop;
     let backgroundColor;
@@ -82,3 +82,13 @@ gsap.fromTo(
         },
     }
 );
+//video
+document.querySelector("#play-btn").addEventListener("click",togglePlay);
+const videoContainer = document.querySelector('.video-container');
+const video = document.getElementById('mainVideo');
+function togglePlay() {
+    video.play();
+    videoContainer.classList.add('play');
+    video.setAttribute('controls', 'true');
+    document.querySelector("#play-btn").removeEventListener("click",togglePlay);
+}
