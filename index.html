@@ -13,12 +13,18 @@
   <body>
     <nav class="navigation">
       <div class="navigation__wrapper">
-        <a href="#main" class="navigation__logo">EKO TM</a>
+        <a href="./#main" class="navigation__logo">EKO TM</a>
         <div class="navigation__links">
-          <a href="#about">Про нас</a>
           <a href="#product">Обладнання</a>
           <a href="#contacts">Контакти</a>
+          <a href="./about.html">Про нас</a>
         </div>
+        <div class="navigation__menuBtn">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        
       </div>
     </nav>
     <section data-background="var(--secondary)" class="header" id="main">
@@ -36,75 +42,38 @@
         </div>
       </div>
     </section>
-    <section data-background="var(--secondary)" class="about" id="about">
-      <div class="about__wrapper">
-        <div class="about__logo">
-          <h1 data-animate >
-            ЕКО ТМ
-          </h1>
-          <h2 data-animate >
-            НОВІ ІДЕЇ ПАКУВАННЯ
-          </h2>
+    <section data-background="var(--primary)" class="buy" id="product">
+      <div class="buy__wrapper">
+        <div class="slider" >
+          <div class="slider__select">
+            <img src="./images/1.JPG" class="slider__select-image" alt="">
+            <img src="./images/2.JPG" class="slider__select-image" alt="">
+            <img src="./images/3.JPG" class="slider__select-image" alt="">
+            <img src="./images/5.jpg" class="slider__select-image" alt="">
+            <img src="./images/6.jpg" class="slider__select-image" alt="">
+          </div>
+          <img class="slider__image" src="./images/3.JPG" alt="">
         </div>
-        <div class="title__description title__description--big" data-animate >
-          Ласкаво просимо до світу інновацій та відмінностей, де кожен продукт — це частинка нашого професійного підходу та зобов'язання до високої якості. Компанія "ЕКО ТМ" стоїть на передових позиціях у виробництві термопакувального обладнання, пропонуючи найсучасніші рішення для вашого бізнесу.
-        </div>
-        <div class="title__header" data-animate >
-          НАША МІСІЯ
-        </div>
-        <div class="about__slide">
-          <img src="./images/about1.jpg" alt="" data-animate >
-          <div class="about__description">
-            <div class="desc-item" data-animate >
-              <div class="desc-item__title">
-                <img src="./images/plantsvgrepocom-1.svg" alt="">
-                <h1>Зберігати екологію</h1>
-              </div>
-              <p>Наші технології та матеріали допомагають зменшувати негативний вплив на довкілля, розвиваючи сталі та екологічно чисті рішення.</p>
+        <div class="buy__description">
+          <h1 >Термопакувальник</h1>
+          <div class="buy__parameters">
+            <div class="buy__icon" >
+              <img src="./images/boxfill-1.svg" alt="">
+              ТП-41470768 АЛЬФА
             </div>
-            <div class="desc-item" data-animate >
-              <div class="desc-item__title">
-                <img src="./images/rockettakeoff-1.svg" alt="">
-                <h1>Забезпечувати Інновації</h1>
+            <div class="buy__icon" >
+              <img src="./images/arrowsfullscreen-1.svg" alt="">
+              400x330x230 мм
               </div>
-              <p>Ми постійно вдосконалюємо наше обладнання, вивчаємо нові технології та шукаємо ефективні шляхи поліпшення упаковки вашого продукту.</p>
-            </div>
-            <div class="desc-item" data-animate >
-              <div class="desc-item__title">
-                <img src="./images/briefcase-1.svg" alt="">
-                <h1>Піднімати Стандарти Якості</h1>
-              </div>
-              <p>Наше обладнання визначає нові стандарти в галузі якості упаковки, гарантуючи найвищу надійність та захист продуктів.</p>
+            <div class="buy__icon" >
+              <img src="./images/lightning-charge-fill 1.svg" alt="">
+              220В 50Гц 200Вт
             </div>
           </div>
-        </div>
-        <div class="title__header" data-animate >
-          НАШІ ПЕРЕВАГИ
-        </div>
-        <div class="about__slide reverse">
-          <img src="./images/about2.jpg" alt="" data-animate >
-          <div class="about__description" data-animate >
-            <div class="desc-item">
-              <div class="desc-item__title">
-                <img src="./images/internetsvgrepocom-1.svg" alt="">
-                <h1>Вітчизняний Виробник</h1>
-              </div>
-              <p>Ми — українська компанія, пишаємося своєю національною спадщиною та виготовленням продукції в Україні.</p>
-            </div>
-            <div class="desc-item" data-animate >
-              <div class="desc-item__title">
-                <img src="./images/handshake-1.svg" alt="">
-                <h1>Співпраця та Довіра</h1>
-              </div>
-              <p>Ми віримо в те, що відкритий діалог та партнерство — це основа успішної співпраці. Ви можете розраховувати на нас як на надійного партнера.</p>
-            </div>
-            <div class="desc-item" data-animate >
-              <div class="desc-item__title">
-                <img src="./images/plantcloudsvgrepocom-1.svg" alt="">
-                <h1>Спрямованість на Сталість</h1>
-              </div>
-              <p>Наші рішення спрямовані на підтримку сталого споживання та збереження ресурсів.</p>
-            </div>
+          <div class="buy__price">
+            <h2 >Ціна : 1111 грн.*</h2>
+            <p >*ціна вказана з  врахуванням ПДВ</p>
+            <a href="#contacts" class="buy__button">Замовити</a>
           </div>
         </div>
       </div>
@@ -164,42 +133,9 @@
         </div>
       </div>
     </section>
-    <section data-background="var(--primary)" class="buy" id="product">
-      <div class="buy__wrapper">
-        <div class="slider" >
-          <div class="slider__select">
-            <img src="./images/1.JPG" class="slider__select-image" alt="">
-            <img src="./images/2.JPG" class="slider__select-image" alt="">
-            <img src="./images/3.JPG" class="slider__select-image" alt="">
-            <img src="./images/5.jpg" class="slider__select-image" alt="">
-            <img src="./images/6.jpg" class="slider__select-image" alt="">
-          </div>
-          <img class="slider__image" src="./images/3.JPG" alt="">
-        </div>
-        <div class="buy__description">
-          <h1 >Термопакувальник</h1>
-          <div class="buy__parameters">
-            <div class="buy__icon" >
-              <img src="./images/boxfill-1.svg" alt="">
-              ТП-41470768 АЛЬФА
-            </div>
-            <div class="buy__icon" >
-              <img src="./images/arrowsfullscreen-1.svg" alt="">
-              400x330x230 мм
-              </div>
-            <div class="buy__icon" >
-              <img src="./images/lightning-charge-fill 1.svg" alt="">
-              220В 50Гц 200Вт
-            </div>
-          </div>
-          <div class="buy__price">
-            <h2 >Ціна : 1111 грн.*</h2>
-            <p >*ціна вказана з  врахуванням ПДВ</p>
-            <a href="#contacts" class="buy__button">Замовити</a>
-          </div>
-        </div>
-      </div>
-    </section>
+    
+    
+    
     <section data-background="var(--secondary)" class="material">
       <div class="material__image" data-animate >
         <img src="./images/material.svg" alt="">

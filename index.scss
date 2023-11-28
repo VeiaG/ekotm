@@ -11,6 +11,7 @@ body {
   box-sizing: border-box;
   //border:1px solid red;
 }
+
 :root {
   --primary: #168888;
   --background: #f6fefa;
@@ -47,6 +48,9 @@ div[class*='__wrapper']{
   &.scrolled{
     height:64px;
     background: var(--secondary);
+    @media(max-width:832px){
+      height:96px;
+    }
   }
   &__wrapper{
     display: flex;
@@ -54,6 +58,8 @@ div[class*='__wrapper']{
     align-items: center;
     @media(max-width:832px){
       justify-content: center;
+      //flex-direction: column;
+
     }
   }
   a{
@@ -69,14 +75,88 @@ div[class*='__wrapper']{
   &__logo{
     font-weight: 700;
     font-size:48px;
+    z-index:21;
+  }
+  &__menuBtn{
+    @media(max-width:832px){
+      display: flex;
+    }
+    display: none;
+    position: absolute;
+    right:16px;
+    top:24px;
+    z-index: 25;
+    transition: all 0.3s ease-in-out;
+    width:48px;
+    height:48px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:8px;
+    div {
+      width:100%;
+      position: relative;
+      top: 0;
+      height: 6px;
+      background-color: var(--background);
+      transition: 0.3s ease transform, 0.3s ease top, 0.3s ease width,
+        0.3s ease right;
+      border-radius: 2px;
+    }
+    & div:first-child {
+      transform-origin: 0;
+    }
+    
+    & div:last-child {
+      margin-bottom: 0;
+      transform-origin: 100% 50%;
+    }
+    
+    & div:nth-child(2) {
+      right: 0;
+    }
+    .opened + & div:first-child {
+
+      transform: rotateZ(45deg) translateX(-12px);
+    }
+    
+    .opened + & div:last-child {
+      transform: rotateZ(45deg) translateX(-2px) translateY(14px);
+    }
+    
+    .opened + & div:nth-child(2) {
+      width: 64px;
+      top: 0;
+      right: 12px;
+      transform: rotateZ(-45deg);
+    }
+    .opened + &{
+      transform:translateX(8px);
+    }
   }
   &__links{
     display:flex;
     gap:32px;
     font-size:32px;
     @media(max-width:832px){
-      display: none;
+      position: fixed;
+      right:-110%;
+      top:0;
+      background:#363636f0 ;
+      width:100vw;
+      height:100vh;
+      align-items: center;
+      padding:128px 0px;
+      font-size:48px;
+      flex-direction: column;
+      transition: all 0.3s ease-in-out;
+      box-sizing: border-box;
+      &.opened{
+        right:0;
+        backdrop-filter: blur(15px);
+      }
     }
+    
   }
 }
 @keyframes height {
@@ -173,7 +253,7 @@ div[class*='__wrapper']{
   }
 }
 .about{
-  padding:64px 0;
+  padding:128px 0;
   &__wrapper{
     display: flex;
     flex-direction: column;
@@ -601,7 +681,8 @@ div[class*='__wrapper']{
   &__slide{
     width:35%;
     @media(max-width:1280px){
-      width:80%
+      width:90%;
+      padding:32px 16px;
     }
     padding:32px 8px 8px;
     display: flex;
@@ -622,6 +703,9 @@ div[class*='__wrapper']{
     img{
       max-width:100%;
       max-height:50%;
+      @media(max-width:832px){
+        max-width:80%;
+      }
     }
     h1{
       font-size: 48px;
@@ -629,6 +713,9 @@ div[class*='__wrapper']{
       font-weight: 700;
       text-align: center;
       margin:0;
+      @media(max-width:832px){
+        font-size:32px;
+      }
     }
     p{
       font-size: 32px;
