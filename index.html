@@ -5,6 +5,7 @@
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <title>ЕКО ТМ</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
     <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
@@ -55,24 +56,31 @@
           <img class="slider__image" src="./images/3.JPG" alt="">
         </div>
         <div class="buy__description">
-          <h1 >Термопакувальник</h1>
-          <div class="buy__parameters">
-            <div class="buy__icon" >
-              <img src="./images/boxfill-1.svg" alt="">
-              ТП-41470768 АЛЬФА
-            </div>
-            <div class="buy__icon" >
-              <img src="./images/arrowsfullscreen-1.svg" alt="">
-              400x330x230 мм
-              </div>
-            <div class="buy__icon" >
-              <img src="./images/lightning-charge-fill 1.svg" alt="">
-              220В 50Гц 200Вт
-            </div>
+          <div class="buy__advantages">
+            <h1>Термопакувальник</h1>
+            <h2><i class="bi bi-arrow-right"></i>Оренда</h2>
+            <h2><i class="bi bi-arrow-right"></i>Лізинг</h2>
+            <h2><i class="bi bi-arrow-right"></i>Продаж</h2>
+            <h2><i class="bi bi-arrow-right"></i>Сервіс</h2>
+            <h2><i class="bi bi-arrow-right"></i>Гарантія 10 років</h2>
+            
           </div>
+          
           <div class="buy__price">
-            <h2 >Ціна : 1111 грн.*</h2>
-            <p >*ціна вказана з  врахуванням ПДВ</p>
+            <div class="buy__parameters">
+              <div class="buy__icon" >
+                <i class="bi bi-box-fill"></i>
+                ТП-41470768 АЛЬФА
+              </div>
+              <div class="buy__icon" >
+                <i class="bi bi-arrows-fullscreen"></i>
+                400x330x230 мм
+                </div>
+              <div class="buy__icon" >
+                <i class="bi bi-lightning-charge-fill"></i>
+                220В 50Гц 200Вт
+              </div>
+            </div>
             <a href="#contacts" class="buy__button">Замовити</a>
           </div>
         </div>
@@ -89,7 +97,7 @@
           </div>
         </div>
         <div class="video-container">
-          <img id="play-btn" src="./images/play-circle-fill.svg"></img>
+          <i class="bi bi-play-circle-fill play-btn"></i>
           <video 
             poster="./videos/video_main_loop.jpg"
             src="./videos/main.mp4" 
@@ -192,7 +200,8 @@
         </div>
         <div class="faq__question">
           <div class="faq__qBtn">
-            <img src="./images/caret-right-fill 1.svg" alt="">Умови співпраці
+            <i class="bi bi-caret-right-fill"></i>
+            Умови співпраці
           </div>
           <div class="faq__content">
             <div>
@@ -316,22 +325,36 @@
           Контакти
         </div>
         <div class="footer__info" data-animate >
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2542.426002463203!2d30.628504599999996!3d50.414534100000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c508ffe9d5f9%3A0x3ead2216a0beac88!2zMUEsINC_0YDQvtGB0L_QtdC60YIg0J_QtdGC0YDQsCDQk9GA0LjQs9C-0YDQtdC90LrQsCwgMdCQLCDQmtC40ZfQsiwgMDIwMDA!5e0!3m2!1suk!2sua!4v1700073345317!5m2!1suk!2sua"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          
           <div class="footer__text">
             <div class="footer__icon">
-              <img src="./images/building-fill 1.svg" alt="">
+              <i class="bi bi-building-fill"></i>
               м.Київ, пр.П.Григоренка 1а, оф.154
             </div>
             <a href="tel:+380671643757" class="footer__icon">
-              <img src="./images/telephone-fill 1.svg" alt="">
+              <i class="bi bi-telephone-fill"></i>
               +380 67 164 37 57
             </a>
             <a href="mailto:ecotm3757@gmail.com" class="footer__icon">
-              <img src="./images/envelope-fill 1.svg" alt="">
+              <i class="bi bi-envelope-fill"></i>
               ecotm3757@gmail.com
             </a>
             
             <a href="./images/4.jpg" class="footer__patent"><img src="./images/4.jpg"  alt=""></a>
+          </div>
+          <div class="footer__form">
+            <div class="form-sucess">
+              <div class="form-sucess__loader"></div>
+            </div>
+            <form>
+              <label for="Name">Ім'я</label>
+              <input type="text" name="Name" placeholder="Ваше ім'я" required>
+              <label for="Phone">Номер телефону</label>
+              <input type="tel" name="Phone" placeholder="Ваш номер телефону" required>
+              <label for="Question">Запитання</label>
+              <textarea name="Question" rows="5" placeholder="Про що б ви хотіли дізнатись більше?"></textarea>
+              <button type="submit">Відправити</button>
+          </form>
           </div>
         </div>
         <div class="footer__copyright">

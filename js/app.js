@@ -142,3 +142,13 @@ if(questions){
         })
     })
 }
+const scriptURL = "https://script.google.com/macros/s/AKfycbxqx_nwAQuf2bQvtTtM20JvkS0VpJp2qJSnACGuSOuuWqQlmEI7bMTsii8rneyzgXBp_A/exec";
+const form = document.querySelector("form");
+const formMessage = document.querySelector(".form-sucess");
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    formMessage.classList.add("fetched");
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => formMessage.innerHTML="Успішно відправлено. Зачекайте поки з вами зв'яжуться")
+    .catch(error => formMessage.innerHTML='Сталася помилка. Будь-ласка , спробуйте пізніше')
+  })
