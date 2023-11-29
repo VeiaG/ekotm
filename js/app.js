@@ -7,28 +7,24 @@ if(isNavStatic){
 }
 let navBackgroundColor;
 const checkSectionColor = ()=>{
-    const scrollY = document.documentElement.scrollTop;
-    sections.forEach((section) => {
-        if (scrollY + 64 > section.offsetTop) {
-            navBackgroundColor = section.getAttribute("data-background");
-        }
-    });
-    nav.style.background = navBackgroundColor || "";
-}
-checkSectionColor();
-document.addEventListener("scroll",(e)=>{
-    const scrollY = document.documentElement.scrollTop;
-    
-    
     if (scrollY > 64) {
         nav.classList.add("scrolled");
 
-        checkSectionColor();
+        const scrollY = document.documentElement.scrollTop;
+        sections.forEach((section) => {
+            if (scrollY + 64 > section.offsetTop) {
+                navBackgroundColor = section.getAttribute("data-background");
+            }
+        });
     } else if(!isNavStatic){
         nav.classList.remove("scrolled");
+        navBackgroundColor=undefined;
     }
     
-});
+    nav.style.background = navBackgroundColor || "";
+}
+checkSectionColor();
+document.addEventListener("scroll",checkSectionColor);
 
 const curSlide = document.querySelector(".slider__image");
 const slides = document.querySelectorAll(".slider__select-image");
@@ -130,3 +126,19 @@ links.forEach(link=>{
         document.body.style.overflow="";
     })
 })
+
+//faq
+const questions = document.querySelectorAll(".faq__question");
+const questionsBtn = document.querySelectorAll(".faq__qBtn");
+if(questions){
+    questionsBtn.forEach((btn,i)=>{
+        btn.addEventListener("click",()=>{
+            if(questions[i].classList.contains("opened")){
+                questions[i].classList.remove("opened");
+            }
+            else{
+                questions[i].classList.add("opened");
+            }
+        })
+    })
+}
