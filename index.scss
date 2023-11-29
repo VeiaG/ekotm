@@ -768,7 +768,7 @@ div[class*='__wrapper']{
     flex-shrink: 0;
     width:544px;
     @media(max-width:832px){
-      width:320px;
+      width:400px;
     }
     padding:16px 24px;
     background:var(--primary);
@@ -933,7 +933,7 @@ div[class*='__wrapper']{
     align-items: center;
     gap:16px;
     padding:16px;
-    background: var(--primary);
+    background: var(--accent);
     position: relative;
     cursor: pointer;
     user-select: none;
