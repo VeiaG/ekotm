@@ -387,7 +387,7 @@ div[class*='__wrapper']{
       video{
         filter:none;
       }
-      #play-btn{
+      .play-btn{
         display: none;
       }
     }
@@ -395,8 +395,8 @@ div[class*='__wrapper']{
       video{
         filter:none;
       }
-      #play-btn{
-        scale:1.05;
+      .play-btn{
+        scale:1.2;
       }
     }
     video{
@@ -535,13 +535,16 @@ div[class*='__wrapper']{
     flex-direction: column;
     justify-content: space-between;
     font-size:24px;
-    h2{
+    h2,h3{
       font-size:32px;
       font-weight: 400; 
       margin:0;
       display: flex;
       gap:16px;
-      
+    }
+    h3{
+      font-weight: 600;
+      margin-top:16px;
     }
   }
   &__advantages{
@@ -591,7 +594,7 @@ div[class*='__wrapper']{
   }
 }
 .slider{
-  width:50%;
+  width:40%;
   @media(max-width:832px){
     width:100%;
   }
@@ -981,6 +984,7 @@ div[class*='__wrapper']{
   &__content{
     display: grid;
     grid-template-rows: 0fr;
+    
     transition: grid-template-rows 0.3s ease-in-out;
     & > div{
       overflow: hidden;
