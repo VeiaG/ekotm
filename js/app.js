@@ -94,7 +94,7 @@ if(headerLine){
     );
 }
 //video
-document.querySelector("#play-btn")?.addEventListener("click",togglePlay);
+document.querySelector(".play-btn")?.addEventListener("click",togglePlay);
 const videoContainer = document.querySelector('.video-container');
 const video = document.getElementById('mainVideo');
 function togglePlay() {
