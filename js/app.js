@@ -101,7 +101,7 @@ function togglePlay() {
     video.play();
     videoContainer.classList.add('play');
     video.setAttribute('controls', 'true');
-    document.querySelector("#play-btn").removeEventListener("click",togglePlay);
+    document.querySelector(".play-btn")?.removeEventListener("click",togglePlay);
 }
 const menuBtn = document.querySelector(".navigation__menuBtn");
 const menuLinks = document.querySelector(".navigation__links");
