@@ -3,9 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <title>ЕКО ТМ - Про нас</title>
+    <title data-lang="unit2">ЕКО ТМ - Про нас</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css"
+    />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
@@ -14,11 +18,12 @@
   <body>
     <nav class="navigation static">
       <div class="navigation__wrapper">
-        <a href="./#main" class="navigation__logo">EKO TM</a>
+        <a href="./#main" class="navigation__logo" data-lang="unit" >ЕКО ТМ</a>
         <div class="navigation__links">
-          <a href="./#product">Обладнання</a>
-          <a href="#contacts">Контакти</a>
-          <a href="./about.html">Про нас</a>
+          <a href="./#product" data-lang="link1">Обладнання</a>
+          <a href="./#contacts" data-lang="link2">Контакти</a>
+          <a href="./about.html" data-lang="link3">Про нас</a>
+          <div> <span class="fi fi-ua"></span>  <span class="fi fi-gb"></span></div>
         </div>
         <div class="navigation__menuBtn">
           <div></div>
@@ -31,17 +36,17 @@
     <section data-background="var(--secondary)" class="about" id="about">
       <div class="about__wrapper">
         <div class="about__logo">
-          <h1 data-animate >
+          <h1 data-animate data-lang="unit" >
             ЕКО ТМ
           </h1>
-          <h2 data-animate >
+          <h2 data-animate data-lang="new" >
             НОВІ ІДЕЇ ПАКУВАННЯ
           </h2>
         </div>
-        <div class="title__description title__description--big" data-animate >
+        <div class="title__description title__description--big" data-animate data-lang="ab_d">
           Ласкаво просимо до світу інновацій та відмінностей, де кожен продукт — це частинка нашого професійного підходу та зобов'язання до високої якості. Компанія "ЕКО ТМ" стоїть на передових позиціях у виробництві термопакувального обладнання, пропонуючи найсучасніші рішення для вашого бізнесу.
         </div>
-        <div class="title__header" data-animate >
+        <div class="title__header" data-animate data-lang="ab_h1">
           НАША МІСІЯ
         </div>
         <div class="about__slide">
@@ -50,27 +55,27 @@
             <div class="desc-item" data-animate >
               <div class="desc-item__title">
                 <img src="./images/plantsvgrepocom-1.svg" alt="">
-                <h1>ДБАТИ ПРО ЕКОЛОГІЮ</h1>
+                <h1 data-lang="ab1_p1_h">ДБАТИ ПРО ЕКОЛОГІЮ</h1>
               </div>
-              <p>Наші технології та матеріали допомагають зменшувати негативний вплив на довкілля, розвиваючи сталі та екологічно чисті рішення.</p>
+              <p data-lang="ab1_p1_d">Наші технології та матеріали допомагають зменшувати негативний вплив на довкілля, розвиваючи сталі та екологічно чисті рішення.</p>
             </div>
             <div class="desc-item" data-animate >
               <div class="desc-item__title">
                 <img src="./images/rockettakeoff-1.svg" alt="">
-                <h1>ВПРОВАДЖУВАТИ ІННОВАЦІЇ</h1>
+                <h1 data-lang="ab1_p2_h">ВПРОВАДЖУВАТИ ІННОВАЦІЇ</h1>
               </div>
-              <p>Ми постійно вдосконалюємо наше обладнання, вивчаємо нові технології та шукаємо ефективні шляхи поліпшення пакування вашого продукту.</p>
+              <p data-lang="ab1_p2_d">Ми постійно вдосконалюємо наше обладнання, вивчаємо нові технології та шукаємо ефективні шляхи поліпшення пакування вашого продукту.</p>
             </div>
             <div class="desc-item" data-animate >
               <div class="desc-item__title">
                 <img src="./images/briefcase-1.svg" alt="">
-                <h1>ПІДНІМАТИ СТАНДАРТИ ЯКОСТІ</h1>
+                <h1 data-lang="ab1_p3_h">ПІДНІМАТИ СТАНДАРТИ ЯКОСТІ</h1>
               </div>
-              <p>Наше обладнання визначає нові стандарти в галузі якості пакування, гарантуючи найвищу надійність та захист продуктів.</p>
+              <p data-lang="ab1_p3_d">Наше обладнання визначає нові стандарти в галузі якості пакування, гарантуючи найвищу надійність та захист продуктів.</p>
             </div>
           </div>
         </div>
-        <div class="title__header" data-animate >
+        <div class="title__header" data-animate  data-lang="ab_h2">
           НАШІ ПЕРЕВАГИ
         </div>
         <div class="about__slide reverse">
@@ -79,23 +84,23 @@
             <div class="desc-item">
               <div class="desc-item__title">
                 <img src="./images/internetsvgrepocom-1.svg" alt="">
-                <h1>ВІТЧИЗНЯНИЙ ВИРОБНИК</h1>
+                <h1 data-lang="ab2_p1_h">ВІТЧИЗНЯНИЙ ВИРОБНИК</h1>
               </div>
-              <p>Ми — українська компанія, пишаємося своєю національною спадщиною та виготовленням продукції в Україні.</p>
+              <p data-lang="ab2_p1_d">Ми — українська компанія, пишаємося своєю національною спадщиною та виготовленням продукції в Україні.</p>
             </div>
             <div class="desc-item" data-animate >
               <div class="desc-item__title">
                 <img src="./images/handshake-1.svg" alt="">
-                <h1>СПІВПРАЦЯ ТА ДОВІРА</h1>
+                <h1 data-lang="ab2_p2_h">СПІВПРАЦЯ ТА ДОВІРА</h1>
               </div>
-              <p>Ми віримо в те, що відкритий діалог та партнерство — це основа успішної співпраці. Ви можете розраховувати на нас як на надійного партнера.</p>
+              <p data-lang="ab2_p2_d">Ми віримо в те, що відкритий діалог та партнерство — це основа успішної співпраці. Ви можете розраховувати на нас як на надійного партнера.</p>
             </div>
             <div class="desc-item" data-animate >
               <div class="desc-item__title">
                 <img src="./images/plantcloudsvgrepocom-1.svg" alt="">
-                <h1>СПРЯМОВАНІСТЬ НА СТАЛІСТЬ</h1>
+                <h1 data-lang="ab2_p3_h">СПРЯМОВАНІСТЬ НА СТАЛІСТЬ</h1>
               </div>
-              <p>Наші рішення спрямовані на підтримку сталого споживання та збереження ресурсів.</p>
+              <p data-lang="ab2_p3_d">Наші рішення спрямовані на підтримку сталого споживання та збереження ресурсів.</p>
             </div>
           </div>
         </div>
@@ -103,7 +108,7 @@
     </section>
     <footer class="footer" id="contacts" data-background="var(--text)">
       <div class="footer__wrapper">
-        <div class="title__header" data-animate >
+        <div class="title__header" data-animate  data-lang="link2">
           Контакти
         </div>
         <div class="footer__info" data-animate >
@@ -111,7 +116,7 @@
           <div class="footer__text">
             <div class="footer__icon">
               <i class="bi bi-building-fill"></i>
-              м.Київ, пр.П.Григоренка 1а, оф.154
+              <span data-lang="adress">м.Київ, пр.П.Григоренка 1а, оф.154</span>
             </div>
             <a href="tel:+380671643757" class="footer__icon">
               <i class="bi bi-telephone-fill"></i>
@@ -128,19 +133,21 @@
               <div class="form-sucess__loader"></div>
             </div>
             <form>
-              <label for="Name">Ім'я</label>
-              <input type="text" name="Name" placeholder="Ваше ім'я" required>
-              <label for="Phone">Номер телефону</label>
-              <input type="tel" name="Phone" placeholder="Ваш номер телефону" required>
-              <label for="Question">Запитання</label>
-              <textarea name="Question" rows="5" placeholder="Про що б ви хотіли дізнатись більше?"></textarea>
-              <button type="submit">Відправити</button>
+              <label for="Name" data-lang="f1_l">Ім'я</label>
+              <input type="text" name="Name" data-placeholder-lang="f1_p" placeholder="Ваше ім'я" required>
+              <label for="Phone" data-lang="f2_l">Номер телефону</label>
+              <input type="tel" name="Phone" data-placeholder-lang="f2_p" placeholder="Ваш номер телефону" required>
+              <label for="Question" data-lang="f3_l">Запитання</label>
+              <textarea name="Question" rows="5" data-placeholder-lang="f3_p"  placeholder="Про що б ви хотіли дізнатись більше?"></textarea>
+              <button type="submit" data-lang="f_e">Відправити</button>
           </form>
           </div>
         </div>
         <div class="footer__copyright">
-          ©2023 ЕКО ТМ
-          <span>Зроблено в співпраці з <a href="https://nuft.edu.ua/" target="_blank">НУХТ</a></span>
+          <span>©<span id="year"></span> <span data-lang="unit">ЕКО ТМ</span></span>
+          <span><span data-lang="coop">Зроблено в співпраці з</span>
+            <a href="https://nuft.edu.ua/" data-lang="nuft" target="_blank">НУХТ</a> 
+          </span>
         </div>
       </div>
       

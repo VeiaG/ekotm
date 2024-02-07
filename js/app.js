@@ -6,6 +6,7 @@ document.querySelector("#year").textContent = currentYear;
 //language
 const langArr={
     "unit" : "ECO TM",
+    "unit2": "ECO TM - About us",
     "header-text":"Innovative equipment for environmentally friendly packaging",
     "link1": "Equipment",
     "link2":"Contacts",
@@ -67,24 +68,59 @@ const langArr={
     "coop":"Made in cooperation with",
     "nuft":"NUFT",
     "form_sucess":"Successfully sent. You will be contacted shortly.",
-    "form_error":"There was an error. Please try again later."
+    "form_error":"There was an error. Please try again later.",
+    "new": "NEW PACKAGING IDEAS",
+    "ab_d":"Welcome to the world of innovation and difference, where every product is a part of our professional approach and commitment to high quality. EKO TM is at the forefront of the heat sealing equipment industry, offering the most advanced solutions for your business.",
+    "ab_h1":"OUR MISSION",
+    "ab_h2":"OUR ADVANTAGES",
+    "ab1_p1_h":"TAKE CARE OF THE ENVIRONMENT",
+    "ab1_p1_d":"Our technologies and materials help reduce the negative impact on the environment by developing sustainable and environmentally friendly solutions.",
+    "ab1_p2_h":"IMPLEMENT INNOVATIONS",
+    "ab1_p2_d":"We are constantly improving our equipment, studying new technologies and looking for effective ways to improve the packaging of your product.",
+    "ab1_p3_h":"RAISE QUALITY STANDARDS",
+    "ab1_p3_d":"Our equipment sets new standards in packaging quality, ensuring the highest reliability and product protection.",
+    
+    "ab2_p1_h":"DOMESTIC MANUFACTURER",
+    "ab2_p1_d":"We are a Ukrainian company, proud of our national heritage and manufacturing in Ukraine.",
+    "ab2_p2_h":"COOPERATION AND TRUST",
+    "ab2_p2_d":"We believe that open dialog and partnership are the basis for successful cooperation. You can count on us as a reliable partner.",
+    "ab2_p3_h":"FOCUS ON SUSTAINABILITY",
+    "ab2_p3_d":"Our solutions are aimed at supporting sustainable consumption and resource conservation.",
+
 }
+
+document.querySelectorAll('a').forEach(e=>{
+//add window url params to to the href's params
+  const url = new URL(e.href)
+  for (let [k,v] of new URLSearchParams(window.location.search).entries()){
+    url.searchParams.set(k,v)
+  }
+  e.href = url.toString();
+})
 
 
 const ua_button = document.querySelector(".fi-ua");
 const us_button = document.querySelector(".fi-gb");
 const allLang = ['ua','us'];
-
-let lang = window.location.hash.substring(1) || "ua";
+const urlParams = new URLSearchParams(window.location.search);
+let lang = urlParams.get('lang') || "ua";
 ua_button.addEventListener('click', ()=>{changeURLlang("");changeLang()});
-us_button.addEventListener('click', ()=>{changeURLlang("#us");changeLang()});
+us_button.addEventListener('click', ()=>{
+    changeURLlang("us");
+    // changeLang()
+});
 
 function changeURLlang(langName){
-    location.href = window.location.pathname + `${langName}`;
-    if(langName==="#us"){
-        location.reload();
-    }
     
+
+    
+    if(langName==="us"){
+        urlParams.set('lang', langName);
+    }
+    else{
+        urlParams.delete('lang');
+    }
+    window.location.search = urlParams;
 }
 function changeLang(){
     if(!allLang.includes(lang)){
@@ -92,7 +128,7 @@ function changeLang(){
         // location.reload();
     }
     if(lang==="us"){
-        document.querySelector('title').innerHTML = langArr["unit"];
+        // document.querySelector('title').innerHTML = langArr["unit"];
         for(let key in langArr){
             let elements = document.querySelectorAll(`[data-lang="${key}"]`);
             let formPlaceholder = document.querySelectorAll(`[data-placeholder-lang="${key}"]`);
