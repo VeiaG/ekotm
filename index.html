@@ -6,6 +6,10 @@
     <title>ЕКО ТМ</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css"
+    />
     <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
@@ -14,11 +18,12 @@
   <body>
     <nav class="navigation">
       <div class="navigation__wrapper">
-        <a href="./#main" class="navigation__logo">ЕКО ТМ</a>
+        <a href="./#main" class="navigation__logo" data-lang="unit">ЕКО ТМ</a>
         <div class="navigation__links">
-          <a href="./#product">Обладнання</a>
-          <a href="#contacts">Контакти</a>
-          <a href="./about.html">Про нас</a>
+          <a href="./#product" data-lang="link1">Обладнання</a>
+          <a href="#contacts" data-lang="link2">Контакти</a>
+          <a href="./about.html" data-lang="link3">Про нас</a>
+          <div> <span class="fi fi-ua"></span>  <span class="fi fi-gb"></span></div>
         </div>
         <div class="navigation__menuBtn">
           <div></div>
@@ -39,7 +44,7 @@
       </div>
       <div class="header__wrapper">
         <div class="header__text">
-          <h1><span id="header__line"></span>Інноваційне обладнання для екологічного пакування</h1>
+          <h1><span id="header__line"></span><span data-lang="header-text">Інноваційне обладнання для екологічного пакування</span></h1>
         </div>
       </div>
     </section>
@@ -57,17 +62,17 @@
         </div>
         <div class="buy__description">
           <div class="buy__advantages">
-            <h1>Термопакувальник</h1>
-            <h2><i class="bi bi-arrow-right"></i>Оренда</h2>
-            <h2><i class="bi bi-arrow-right"></i>Лізинг</h2>
-            <h2><i class="bi bi-arrow-right"></i>Продаж</h2>
-            <h2><i class="bi bi-arrow-right"></i>Сервіс</h2>
-            <h3><i class="bi bi-check-circle"></i>Гарантія 10 років</h3>
+            <h1 data-lang="product-name">Термопакувальник</h1>
+            <h2><i class="bi bi-arrow-right"></i><span data-lang="p1">Оренда</span></h2>
+            <h2><i class="bi bi-arrow-right"></i><span data-lang="p2">Лізинг</span></h2>
+            <h2><i class="bi bi-arrow-right"></i><span data-lang="p3">Продаж</span></h2>
+            <h2><i class="bi bi-arrow-right"></i><span data-lang="p4">Сервіс</span></h2>
+            <h3><i class="bi bi-check-circle"></i><span data-lang="p5">Гарантія 10 років</span></h3>
             
           </div>
           
           <div class="buy__price">
-            <a href="#contacts" class="buy__button">Замовити</a>
+            <a href="#contacts" class="buy__button" data-lang="order">Замовити</a>
           </div>
         </div>
       </div>
@@ -75,10 +80,10 @@
     <section data-background="var(--secondary)" class="video">
       <div class="video__wrapper">
         <div class="title">
-          <div class="title__header"  data-animate >
+          <div class="title__header"  data-animate data-lang="s1_h">
             Обладнання в дії
           </div>
-          <div class="title__description"  data-animate >
+          <div class="title__description"  data-animate data-lang="s1_d">
             Переконайтеся на власні очі, як наше термопакувальне обладнання забезпечить найвищий стандарт пакування для ваших продуктів. 
           </div>
         </div>
@@ -96,32 +101,32 @@
     <section data-background="var(--accent)" class="product">
       <div class="product__wrapper">
         <div class="title">
-          <div class="title__header"  data-animate >
+          <div class="title__header"  data-animate data-lang="s2_h">
             Наш термопакувальник
           </div>
-          <div class="title__description" data-animate >
+          <div class="title__description" data-animate data-lang="s2_d">
             Ефектне, екологічне та просте у використанні обладнання - ось як ми допомагаємо вашим продуктам виділятися.
           </div>
         </div>
         <div class="product-slide" style="background:var(--primary); color:var(--background)" >
           <video src="./videos/loop1.mp4" loop muted autoplay playsinline  data-animate ></video>
           <div class="product-slide__description">
-            <h1 data-animate >МИТТЄВЕ ПАКУВАННЯ</h1>
-            <p data-animate >Наш термопакувальник - це не просто обладнання, це швидкість та легкість у кожному етапі пакування. Надайте перевагу ефективності та якості!</p>
+            <h1 data-animate data-lang="s2_p1_h">МИТТЄВЕ ПАКУВАННЯ</h1>
+            <p data-animate data-lang="s2_p1_d">Наш термопакувальник - це не просто обладнання, це швидкість та легкість у кожному етапі пакування. Надайте перевагу ефективності та якості!</p>
           </div>
         </div>
         <div class="product-slide reverse" style="background:var(--background); color:var(--text)" >
           <video data-animate  src="./videos/loop2.mp4" loop muted autoplay playsinline></video>
           <div class="product-slide__description">
-            <h1 data-animate >НЕПЕРЕВЕРШЕНИЙ ЗАХИСТ</h1>
-            <p data-animate >Для пакування використовується двокомпонентний папір. Целюлоза та тонкий шар плівки, яка при термічному притисканні спаюється, утворюючи перешкоду для розповсюдження запахів, забруднень і навіть рідин при транспортуванні після купівлі товару в магазині</p>
+            <h1 data-animate data-lang="s2_p2_h">НЕПЕРЕВЕРШЕНИЙ ЗАХИСТ</h1>
+            <p data-animate data-lang="s2_p2_d">Для пакування використовується двокомпонентний папір. Целюлоза та тонкий шар плівки, яка при термічному притисканні спаюється, утворюючи перешкоду для розповсюдження запахів, забруднень і навіть рідин при транспортуванні після купівлі товару в магазині.</p>
           </div>
         </div>
         <div class="product-slide" style="background:var(--secondary); color:var(--background)" >
           <video data-animate  src="./videos/loop3.mp4" loop muted autoplay playsinline></video>
           <div class="product-slide__description">
-            <h1 data-animate >ЕСТЕТИКА ТА ЯКІСТЬ</h1>
-            <p data-animate >Таке пакування не просто захищає продукти - воно створює враження! 
+            <h1 data-animate data-lang="s2_p3_h">ЕСТЕТИКА ТА ЯКІСТЬ</h1>
+            <p data-animate data-lang="s2_p3_d">Таке пакування не просто захищає продукти - воно створює враження! 
               Якість пакування відображається на вашому бренді, надаючи покупцям неперевершені естетичні враження та підвищуючи їхню довіру до вашого продукту.</p>
           </div>
         </div>
@@ -136,40 +141,40 @@
       </div>
       <div class="material__wrapper">
         <div class="title">
-          <div class="title__header" data-animate >
+          <div class="title__header" data-animate data-lang="s3_h">
             Витратні матеріали
           </div>
-          <div class="title__description" data-animate >
+          <div class="title__description" data-animate data-lang="s3_d">
             Ідеальна Гармонія Між Міцністю та Екологічністю.
           </div>
         </div>
         <div class="material__text">
-          <span id="text1" class="material__txt" data-animate >
+          <span id="text1" class="material__txt" data-animate data-lang="pol">
             Поліетиленовий наношар
           </span>
-          <span id="text2" data-animate >
+          <span id="text2" data-animate data-lang="cel">
             Целюлоза
           </span>
           <span id="text3" data-animate >
-            <img src="./images/arrow.svg" alt="">
-            10 мікронів
+            <img src="./images/arrow.svg" alt="" >
+            <span data-lang="mic">10 мікронів</span>
           </span>
         </div>
         <div class="advantages">
           <div data-animate  class="advantages__slide">
-            <h1>Екологічність</h1>
+            <h1 data-lang="s3_p1_h">Екологічність</h1>
             <img src="./images/advantage1.svg" alt="">
-            <p>Безпечний для використання та утилізації</p>
+            <p data-lang="s3_p1_d">Безпечний для використання та утилізації</p>
           </div>
           <div data-animate  class="advantages__slide">
-            <h1>Міцність</h1>
+            <h1 data-lang="s3_p2_h">Міцність</h1>
             <img src="./images/advantage2.svg" alt="">
-            <p>Щільне пакування запобігає будь-яким ушкодженням продуктів</p>
+            <p data-lang="s3_p2_d">Щільне пакування запобігає будь-яким ушкодженням продуктів</p>
           </div>
           <div data-animate  class="advantages__slide">
-            <h1>Якість</h1>
+            <h1 data-lang="s3_p3_h">Якість</h1>
             <img src="./images/advantage3.svg" alt="">
-            <p>Якісно запакований товар залишає приємне враження у покупців</p>
+            <p data-lang="s3_p2_d" >Якісно запакований товар залишає приємне враження у покупців</p>
           </div>
         </div>
       </div>
@@ -180,25 +185,25 @@
           <div class="title__header"  data-animate >
             FAQ
           </div>
-          <div class="title__description"  data-animate >
+          <div class="title__description"  data-animate data-lang="s4_d">
             Знайдіть відповіді на ваші запитання у нашому розділі FAQ.
           </div>
         </div>
         <div class="faq__question">
           <div class="faq__qBtn">
             <i class="bi bi-caret-right-fill"></i>
-            Умови співпраці
+            <span data-lang="q1">Умови співпраці</span>
           </div>
           <div class="faq__content">
             <div>
               <ul>
-                <li>
+                <li data-lang="q1_a1">
                   придбання на умовах купівлі-продажу
                 </li>
-                <li>
+                <li data-lang="q1_a2">
                   оренда
                 </li>
-                <li>
+                <li data-lang="q1_a3">
                   лізинг з правом викупу
                 </li>
               </ul>
@@ -208,14 +213,14 @@
         <div class="faq__question">
           <div class="faq__qBtn">
             <i class="bi bi-caret-right-fill"></i>
-            Метричні розміри
+            <span data-lang="q2">Метричні розміри</span>
           </div>
           <div class="faq__content">
             <div>
               
                 <ul>
                   <i class="bi bi-arrows-fullscreen"></i>
-                  400x330x230 мм
+                  <span data-lang="q2_a">400x330x230 мм</span>
                 </ul>
             </div>
           </div>
@@ -226,50 +231,50 @@
       <svg class="svg">
         <clipPath id="clip" clipPathUnits="objectBoundingBox"><path d="M0,0.081 C0,0.081,0.161,0.136,0.497,0.036 C0.833,-0.065,1,0.081,1,0.081 V1 H0 V0.081"></path></clipPath>
       </svg>
-      <div class="title__header" data-animate >
+      <div class="title__header" data-animate data-lang="s5_h">
         Відгуки
       </div>
       <div class="reviews__slider" data-animate >
         <div class="reviews__slide">
           <div class="reviews__header">
             <img src="./images/review (0).png" alt="">
-            Ірина С.
+            <span data-lang="r1_n">Ірина С.</span>
           </div>
-          <p>Обладнання від <span class="strong">"ЕКО ТМ"</span> - це крок вперед у світі сталого бізнесу. Наші клієнти захоплені не тільки екологічністю упаковки, але і легкістю використання. Це - виграш для всіх - і для нас, і для природи!</p>
+          <p data-lang="r1">Обладнання від <span class="strong">"ЕКО ТМ"</span> - це крок вперед у світі сталого бізнесу. Наші клієнти захоплені не тільки екологічністю упаковки, але і легкістю використання. Це - виграш для всіх - і для нас, і для природи!</p>
         </div>
         <div class="reviews__slide">
           <div class="reviews__header">
             <img src="./images/review (1).png" alt="">
-            Олександр К.
+            <span data-lang="r2_n">Олександр К.</span>
           </div>
-          <p>
+          <p data-lang="r2">
             Наша компанія обрала <span class="strong">"ЕКО ТМ"</span> для пакування наших продуктів, і ми залишаємося враженими результатами. Надійність упаковки та естетика - саме те, що робить співпрацю з цією компанією вигідною.
           </p>
         </div>
         <div class="reviews__slide">
           <div class="reviews__header">
             <img src="./images/review (2).png" alt="">
-            Людмила Г.
+            <span data-lang="r3_n">Людмила Г.</span>
           </div>
-          <p>
+          <p data-lang="r3">
             Як фахівець у галузі виробництва сирів, я високо оцінюю якість яку надає <span class="strong">"ЕКО ТМ"</span>. Папір для термозберігання - це просто чудово. Покупці залишаються задоволеними, а я впевнена у якості моїх продуктів.
           </p>
         </div>
         <div class="reviews__slide">
           <div class="reviews__header">
             <img src="./images/review (3).png" alt="">
-            Андрій М.
+            <span data-lang="r4_n">Андрій М.</span>
           </div>
-          <p>
+          <p data-lang="r4">
             Термопакувальники від <span class="strong">"ЕКО ТМ"</span>  стали невід'ємною частиною нашого бізнесу. Легкість у використанні та збереження аромату продуктів - це те, що робить цю техніку неперевершеною!
           </p>
         </div>
         <div class="reviews__slide">
           <div class="reviews__header">
             <img src="./images/review (4).png" alt="">
-            Наталя П.
+            <span data-lang="r5_n">Наталя П.</span>
           </div>
-          <p>
+          <p data-lang="r5">
             Обрала це обладнання для ресторану, і не можу бути більш задоволеною. Легка у використанні, естетична та з екологічно чистим підходом - це все, що ми шукали для нашого бізнесу. Рекомендую!
           </p>
         </div>
@@ -277,43 +282,43 @@
         <div class="reviews__slide">
           <div class="reviews__header">
             <img src="./images/review (0).png" alt="">
-            Ірина С.
+            <span data-lang="r1_n">Ірина С.</span>
           </div>
-          <p>Обладнання від <span class="strong">"ЕКО ТМ"</span> - це крок вперед у світі сталого бізнесу. Наші клієнти захоплені не тільки екологічністю упаковки, але і легкістю використання. Це - виграш для всіх - і для нас, і для природи!</p>
+          <p data-lang="r1">Обладнання від <span class="strong">"ЕКО ТМ"</span> - це крок вперед у світі сталого бізнесу. Наші клієнти захоплені не тільки екологічністю упаковки, але і легкістю використання. Це - виграш для всіх - і для нас, і для природи!</p>
         </div>
         <div class="reviews__slide">
           <div class="reviews__header">
             <img src="./images/review (1).png" alt="">
-            Олександр К.
+            <span data-lang="r2_n">Олександр К.</span>
           </div>
-          <p>
+          <p data-lang="r2">
             Наша компанія обрала <span class="strong">"ЕКО ТМ"</span> для пакування наших продуктів, і ми залишаємося враженими результатами. Надійність упаковки та естетика - саме те, що робить співпрацю з цією компанією вигідною.
           </p>
         </div>
         <div class="reviews__slide">
           <div class="reviews__header">
             <img src="./images/review (2).png" alt="">
-            Людмила Г.
+            <span data-lang="r3_n">Людмила Г.</span>
           </div>
-          <p>
+          <p data-lang="r3">
             Як фахівець у галузі виробництва сирів, я високо оцінюю якість яку надає <span class="strong">"ЕКО ТМ"</span>. Папір для термозберігання - це просто чудово. Покупці залишаються задоволеними, а я впевнена у якості моїх продуктів.
           </p>
         </div>
         <div class="reviews__slide">
           <div class="reviews__header">
             <img src="./images/review (3).png" alt="">
-            Андрій М.
+            <span data-lang="r4_n">Андрій М.</span>
           </div>
-          <p>
+          <p data-lang="r4">
             Термопакувальники від <span class="strong">"ЕКО ТМ"</span>  стали невід'ємною частиною нашого бізнесу. Легкість у використанні та збереження аромату продуктів - це те, що робить цю техніку неперевершеною!
           </p>
         </div>
         <div class="reviews__slide">
           <div class="reviews__header">
             <img src="./images/review (4).png" alt="">
-            Наталя П.
+            <span data-lang="r5_n">Наталя П.</span>
           </div>
-          <p>
+          <p data-lang="r5">
             Обрала це обладнання для ресторану, і не можу бути більш задоволеною. Легка у використанні, естетична та з екологічно чистим підходом - це все, що ми шукали для нашого бізнесу. Рекомендую!
           </p>
         </div>
@@ -321,7 +326,7 @@
     </section>
     <footer class="footer" id="contacts" data-background="var(--text)">
       <div class="footer__wrapper">
-        <div class="title__header" data-animate >
+        <div class="title__header" data-animate  data-lang="link2">
           Контакти
         </div>
         <div class="footer__info" data-animate >
@@ -329,7 +334,7 @@
           <div class="footer__text">
             <div class="footer__icon">
               <i class="bi bi-building-fill"></i>
-              м.Київ, пр.П.Григоренка 1а, оф.154
+              <span data-lang="adress">м.Київ, пр.П.Григоренка 1а, оф.154</span>
             </div>
             <a href="tel:+380671643757" class="footer__icon">
               <i class="bi bi-telephone-fill"></i>
@@ -346,19 +351,21 @@
               <div class="form-sucess__loader"></div>
             </div>
             <form>
-              <label for="Name">Ім'я</label>
-              <input type="text" name="Name" placeholder="Ваше ім'я" required>
-              <label for="Phone">Номер телефону</label>
-              <input type="tel" name="Phone" placeholder="Ваш номер телефону" required>
-              <label for="Question">Запитання</label>
-              <textarea name="Question" rows="5" placeholder="Про що б ви хотіли дізнатись більше?"></textarea>
-              <button type="submit">Відправити</button>
+              <label for="Name" data-lang="f1_l">Ім'я</label>
+              <input type="text" name="Name" data-placeholder-lang="f1_p" placeholder="Ваше ім'я" required>
+              <label for="Phone" data-lang="f2_l">Номер телефону</label>
+              <input type="tel" name="Phone" data-placeholder-lang="f2_p" placeholder="Ваш номер телефону" required>
+              <label for="Question" data-lang="f3_l">Запитання</label>
+              <textarea name="Question" rows="5" data-placeholder-lang="f3_p"  placeholder="Про що б ви хотіли дізнатись більше?"></textarea>
+              <button type="submit" data-lang="f_e">Відправити</button>
           </form>
           </div>
         </div>
         <div class="footer__copyright">
-          ©2023 ЕКО ТМ
-          <span>Зроблено в співпраці з <a href="https://nuft.edu.ua/" target="_blank">НУХТ</a></span>
+          <span>©<span id="year"></span> <span data-lang="unit">ЕКО ТМ</span></span>
+          <span><span data-lang="coop">Зроблено в співпраці з</span>
+            <a href="https://nuft.edu.ua/" data-lang="nuft" target="_blank">НУХТ</a> 
+          </span>
         </div>
       </div>
       
