@@ -56,6 +56,7 @@ div[class*='__wrapper']{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap:16px;
     @media(max-width:832px){
       justify-content: center;
       //flex-direction: column;
@@ -76,6 +77,7 @@ div[class*='__wrapper']{
     font-weight: 700;
     font-size:48px;
     z-index:21;
+    margin-right:auto;
   }
   &__menuBtn{
     @media(max-width:832px){
@@ -134,14 +136,28 @@ div[class*='__wrapper']{
       transform:translateX(8px);
     }
   }
+  &__lang{
+    display: flex;
+    gap:8px;
+    font-size: 24px;
+    @media(max-width:832px){
+      font-size:36px;
+      position: fixed;
+      flex-direction: column;
+      top:80px;
+      gap:16px;
+      right:16px;
+    }
+  }
   &__links{
+    
     display:flex;
     align-items: center;
     gap:32px;
     font-size:32px;
     @media(max-width:832px){
       position: fixed;
-      right:-110%;
+      transform:translateX(+110%);
       top:0;
       background:#363636f0 ;
       width:100vw;
@@ -153,14 +169,8 @@ div[class*='__wrapper']{
       transition: all 0.3s ease-in-out;
       box-sizing: border-box;
       &.opened{
-        right:0;
+        transform:translateX(0);
         backdrop-filter: blur(15px);
-      }
-    }
-    .fi{
-      font-size: 24px;
-      @media(max-width:832px){
-          font-size:48px;
       }
     }
     
@@ -1013,7 +1023,7 @@ div[class*='__wrapper']{
 form{
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   gap:8px;
   label{
     font-size:24px;
