@@ -78,6 +78,9 @@ div[class*='__wrapper']{
     font-size:48px;
     z-index:21;
     margin-right:auto;
+    @media(max-width:832px){
+      margin:0;
+    }
   }
   &__menuBtn{
     @media(max-width:832px){
