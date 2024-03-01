@@ -1,7 +1,10 @@
 import '../index.scss';
 
 const currentYear = new Date().getFullYear().toString();
-document.querySelector("#year").textContent = currentYear;
+const yearSpan = document.querySelector("#year");
+if(yearSpan){
+    yearSpan.textContent = currentYear;
+}
 
 //language
 const langArr={
@@ -104,11 +107,14 @@ const us_button = document.querySelector(".fi-gb");
 const allLang = ['ua','us'];
 const urlParams = new URLSearchParams(window.location.search);
 let lang = urlParams.get('lang') || "ua";
-ua_button.addEventListener('click', ()=>{changeURLlang("");changeLang()});
-us_button.addEventListener('click', ()=>{
-    changeURLlang("us");
-    // changeLang()
-});
+if(ua_button){
+    ua_button.addEventListener('click', ()=>{changeURLlang("");changeLang()});
+}
+if(us_button){
+    us_button.addEventListener('click', ()=>{
+        changeURLlang("us");
+    });
+}
 
 function changeURLlang(langName){
     
@@ -198,13 +204,15 @@ if(curSlide){
         updateSelected();
     }
     const timeout = setInterval(nextTimer,5000);
-    slides.forEach((slide,i)=>{
-        slide.addEventListener("click",(e)=>{
-            currentSlide = i;
-            clearTimeout(timeout);
-            updateSelected();
+    if(slides){
+        slides.forEach((slide,i)=>{
+            slide.addEventListener("click",(e)=>{
+                currentSlide = i;
+                clearTimeout(timeout);
+                updateSelected();
+            });
         });
-    });
+    }
 }
 
 
@@ -213,7 +221,7 @@ gsap.registerPlugin(ScrollTrigger);
 const elementsToAnimate = document.querySelectorAll('[data-animate]');
 
 
-elementsToAnimate.forEach((element) => {
+elementsToAnimate?.forEach((element) => {
     gsap.from(element, {
       opacity: 0, 
       y: 20, 
