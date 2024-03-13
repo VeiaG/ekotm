@@ -1,4 +1,8 @@
-import '../index.scss';
+import './style.scss'
+import { gsap } from "gsap";
+
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 
 const currentYear = new Date().getFullYear().toString();
 const yearSpan = document.querySelector("#year");
@@ -7,7 +11,10 @@ if(yearSpan){
 }
 
 //language
-const langArr={
+type Language = {
+  [key: string]: string;
+}
+const langArr:Language={
     "unit" : "ECO TM",
     "unit2": "ECO TM - About us",
     "header-text":"Innovative equipment for environmentally friendly packaging",
@@ -116,9 +123,7 @@ if(us_button){
     });
 }
 
-function changeURLlang(langName){
-    
-
+function changeURLlang(langName: string){
     
     if(langName==="us"){
         urlParams.set('lang', langName);
@@ -126,7 +131,7 @@ function changeURLlang(langName){
     else{
         urlParams.delete('lang');
     }
-    window.location.search = urlParams;
+    window.location.search = urlParams.toString();
 }
 function changeLang(){
     if(!allLang.includes(lang)){
@@ -137,7 +142,7 @@ function changeLang(){
         // document.querySelector('title').innerHTML = langArr["unit"];
         for(let key in langArr){
             let elements = document.querySelectorAll(`[data-lang="${key}"]`);
-            let formPlaceholder = document.querySelectorAll(`[data-placeholder-lang="${key}"]`);
+            let formPlaceholder = document.querySelectorAll<HTMLFormElement>(`[data-placeholder-lang="${key}"]`);
             if(elements){
                 elements.forEach(element =>{
                     element.innerHTML = langArr[key];
@@ -154,14 +159,15 @@ function changeLang(){
 }
 changeLang();
 
-const nav = document.querySelector(".navigation");
-const sections = document.querySelectorAll("[data-background]");
-const isNavStatic = nav.classList.contains("static");
-if(isNavStatic){
+const nav = document.querySelector<HTMLElement>(".navigation");
+const sections = document.querySelectorAll<HTMLElement>("[data-background]");
+const isNavStatic = nav?.classList.contains("static");
+if(nav){
+  if(isNavStatic){
     nav.classList.add("scrolled");
-}
-let navBackgroundColor;
-const checkSectionColor = ()=>{
+  }
+  let navBackgroundColor:string | null;
+  const checkSectionColor = ()=>{
     if (scrollY > 64) {
         nav.classList.add("scrolled");
 
@@ -173,22 +179,25 @@ const checkSectionColor = ()=>{
         });
     } else if(!isNavStatic){
         nav.classList.remove("scrolled");
-        navBackgroundColor=undefined;
+        navBackgroundColor=null;
     }
     
     nav.style.background = navBackgroundColor || "";
+  }
+  checkSectionColor();
+  document.addEventListener("scroll",checkSectionColor);
 }
-checkSectionColor();
-document.addEventListener("scroll",checkSectionColor);
 
-const curSlide = document.querySelector(".slider__image");
-const slides = document.querySelectorAll(".slider__select-image");
+const curSlide = document.querySelector<HTMLImageElement>(".slider__image");
+const slides = document.querySelectorAll<HTMLImageElement>(".slider__select-image");
 if(curSlide){
     let currentSlide = 0;
 
     function updateSelected(){
         const src = slides[currentSlide].src;
-        curSlide.src = src;
+        if(curSlide){
+          curSlide.src = src;
+        }
         slides.forEach((slide,i)=>{
             if(i===currentSlide){
                 slide.classList.add("selected");
@@ -206,7 +215,7 @@ if(curSlide){
     const timeout = setInterval(nextTimer,5000);
     if(slides){
         slides.forEach((slide,i)=>{
-            slide.addEventListener("click",(e)=>{
+            slide.addEventListener("click",()=>{
                 currentSlide = i;
                 clearTimeout(timeout);
                 updateSelected();
@@ -250,19 +259,25 @@ if(headerLine){
         }
     );
 }
+
+
 //video
 document.querySelector(".play-btn")?.addEventListener("click",togglePlay);
 const videoContainer = document.querySelector('.video-container');
-const video = document.getElementById('mainVideo');
+const video = document.querySelector<HTMLVideoElement>('#mainVideo');
 function togglePlay() {
-    video.play();
-    videoContainer.classList.add('play');
-    video.setAttribute('controls', 'true');
-    document.querySelector(".play-btn")?.removeEventListener("click",togglePlay);
+    if(video && videoContainer){
+      video.play();
+      videoContainer.classList.add('play');
+      video.setAttribute('controls', 'true');
+      document.querySelector(".play-btn")?.removeEventListener("click",togglePlay);
+    }
 }
 const menuBtn = document.querySelector(".navigation__menuBtn");
 const menuLinks = document.querySelector(".navigation__links");
-menuBtn.addEventListener("click",()=>{
+
+if(menuBtn && menuLinks){
+  menuBtn.addEventListener("click",()=>{
     if(menuLinks.classList.contains("opened")){
         menuLinks.classList.remove("opened");
         document.body.style.overflow="";
@@ -271,18 +286,22 @@ menuBtn.addEventListener("click",()=>{
         document.body.style.overflow="hidden";
     }
 })
+}
 const links = document.querySelectorAll(".navigation__links a");
 const logoLink = document.querySelector(".navigation__logo");
-logoLink.addEventListener("click",()=>{
+
+if(logoLink && menuLinks){
+  logoLink.addEventListener("click",()=>{
     menuLinks.classList.remove("opened");
     document.body.style.overflow="";
+  })
+  links.forEach(link=>{
+      link.addEventListener("click",()=>{
+          menuLinks.classList.remove("opened");
+          document.body.style.overflow="";
+      })
 })
-links.forEach(link=>{
-    link.addEventListener("click",()=>{
-        menuLinks.classList.remove("opened");
-        document.body.style.overflow="";
-    })
-})
+}
 
 //faq
 const questions = document.querySelectorAll(".faq__question");
@@ -299,16 +318,19 @@ if(questions){
         })
     })
 }
-const scriptURL = "https://script.google.com/macros/s/AKfycbxqx_nwAQuf2bQvtTtM20JvkS0VpJp2qJSnACGuSOuuWqQlmEI7bMTsii8rneyzgXBp_A/exec";
+
+const scriptURL = "https://script.google.com/macros/s/AKfycbxjvMbZR-NP_L73JJMebSRuWw_5ibtIDhsMtPpjdoBucIPZsUGqRvYDfqY_eFv7X-ZNhA/exec";
 const form = document.querySelector("form");
 const formMessage = document.querySelector(".form-sucess");
-form.addEventListener('submit', e => {
+if(form && formMessage){
+  form.addEventListener('submit', e => {
     e.preventDefault();
     formMessage.classList.add("fetched");
     const sucessMsg = lang==="us" ? langArr["form_sucess"] : "Успішно відправлено. Зачекайте поки з вами зв'яжуться.";
     const errorMsg = lang==="us" ? langArr["form_error"] : 'Сталася помилка. Будь-ласка , спробуйте пізніше.';
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    .then(response => formMessage.innerHTML= sucessMsg)
-    .catch(error => formMessage.innerHTML=errorMsg)
+    .then(() => formMessage.innerHTML= sucessMsg)
+    .catch(() => formMessage.innerHTML=errorMsg)
   })
+}
 
