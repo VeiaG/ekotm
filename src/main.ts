@@ -328,9 +328,24 @@ if(form && formMessage){
     formMessage.classList.add("fetched");
     const sucessMsg = lang==="us" ? langArr["form_sucess"] : "Успішно відправлено. Зачекайте поки з вами зв'яжуться.";
     const errorMsg = lang==="us" ? langArr["form_error"] : 'Сталася помилка. Будь-ласка , спробуйте пізніше.';
+    const formData = new FormData(form);
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
     .then(() => formMessage.innerHTML= sucessMsg)
     .catch(() => formMessage.innerHTML=errorMsg)
+    
+    const plainFormData = Object.fromEntries(formData.entries());
+	const formDataJsonString = JSON.stringify(plainFormData);
+    fetch('https://ecotm.com.ua/feedback',{
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            "Accept": "application/json"
+        },
+        body: formDataJsonString
+    })
+    .then(() => console.log('Форма відправлена на пошту'))
+    .catch(() => console.error('Помилка відправки формина пошту'));
+    
   })
 }
 
