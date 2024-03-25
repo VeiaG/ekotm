@@ -17,6 +17,7 @@ type Language = {
 const langArr:Language={
     "unit" : "ECO TM",
     "unit2": "ECO TM - About us",
+    "unit3": "ECO TM - Public offer agreement",
     "header-text":"Innovative equipment for environmentally friendly packaging",
     "link1": "Equipment",
     "link2":"Contacts",
@@ -76,7 +77,7 @@ const langArr:Language={
     "f3_p":"What would you like to know more about?",
     "f_e":"Submit",
     "coop":"Made in cooperation with",
-    "nuft":"NUFT",
+    "nuft":"National university of food technologies",
     "form_sucess":"Successfully sent. You will be contacted shortly.",
     "form_error":"There was an error. Please try again later.",
     "new": "NEW PACKAGING IDEAS",
@@ -89,7 +90,7 @@ const langArr:Language={
     "ab1_p2_d":"We are constantly improving our equipment, studying new technologies and looking for effective ways to improve the packaging of your product.",
     "ab1_p3_h":"RAISE QUALITY STANDARDS",
     "ab1_p3_d":"Our equipment sets new standards in packaging quality, ensuring the highest reliability and product protection.",
-    
+    "oferta":"Public offer agreement",
     "ab2_p1_h":"DOMESTIC MANUFACTURER",
     "ab2_p1_d":"We are a Ukrainian company, proud of our national heritage and manufacturing in Ukraine.",
     "ab2_p2_h":"COOPERATION AND TRUST",

@@ -9,7 +9,7 @@ body {
 }
 *{
   box-sizing: border-box;
-  //border:1px solid red;
+  // outline:1px solid red;
 }
 
 :root {
@@ -243,6 +243,7 @@ div[class*='__wrapper']{
     justify-content: flex-start;
     @media(max-width:832px){
       justify-content: center;
+
     }
     align-items: center;
     z-index:10;
@@ -254,6 +255,7 @@ div[class*='__wrapper']{
       width:50%;
       @media(max-width:832px){
         width: 100%;
+        font-size:36px;
       }
       font-weight: 400;
       margin-left:24px;
@@ -510,7 +512,7 @@ div[class*='__wrapper']{
       font-size: 48px;
       font-weight: 700;
       @media(max-width:832px){
-        font-size:32px;
+        font-size:28px;
       }
     }
     p{
@@ -522,6 +524,7 @@ div[class*='__wrapper']{
     }
   }
 }
+
 .buy{
   background:var(--primary);
   color:var(--background);
@@ -537,7 +540,24 @@ div[class*='__wrapper']{
       text-align: center;
     }
   }
-
+  &__logo{
+    width:128px;
+    height:64px;
+    object-fit: cover;
+    border-radius: 16px;
+    cursor:pointer;
+    // transition: transform 0.3s ease-in-out;
+    &:hover{
+      transform: scale(1.04);
+    }
+    &-wrapper{
+      display: flex;
+      gap:12px;
+      @media (max-width:832px){
+        justify-content: center;
+      }
+    }
+  }
   p{
     font-size: 24px;
     font-weight: 400;
@@ -847,6 +867,26 @@ div[class*='__wrapper']{
   color:var(--background);
   background:var(--text);
   padding:64px 0 0;
+  &__year{
+    display:flex;
+    flex-direction: row-reverse;
+    @media (max-width:832px){
+      flex-direction: column;
+    }
+    gap:4px;
+    font-size:16px;
+    flex-shrink: 0;
+  }
+  &__links{
+    width:100%;
+    display: flex;
+    justify-content: end;
+    gap:32px;
+    font-size: 12px;
+    a{
+      text-decoration: underline;
+    }
+  }
   &__form{
     flex-grow:1;
     position: relative;
@@ -947,6 +987,7 @@ div[class*='__wrapper']{
     }
   }
   &__copyright{
+    gap:32px;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -955,7 +996,7 @@ div[class*='__wrapper']{
     position: relative;
     display: flex;
     justify-content: space-between;
-
+    align-items: center;
     a{
       text-decoration: underline;
     }
@@ -1091,4 +1132,9 @@ form{
 }
 @keyframes s3{ 
   100%{transform: rotate(1turn)}
+}
+
+.nuft-text{
+  text-align: right;
+  font-size:12px;
 }
